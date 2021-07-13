@@ -111,7 +111,7 @@ class HomeViewController: BaseViewController {
             carauselView.topAnchor.constraint(equalTo: heyLabel.bottomAnchor, constant: 5),
             carauselView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             carauselView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            carauselView.bottomAnchor.constraint(equalTo: topProductLabel.topAnchor, constant: -20),
+            carauselView.bottomAnchor.constraint(equalTo: topProductLabel.topAnchor, constant: -10),
             carauselView.heightAnchor.constraint(equalToConstant: 240),
             
             
@@ -119,7 +119,7 @@ class HomeViewController: BaseViewController {
             topProductLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             topProductLabel.bottomAnchor.constraint(equalTo: customCategory.topAnchor, constant: -5),
             
-            customCategory.topAnchor.constraint(equalTo: topProductLabel.bottomAnchor, constant: 20),
+            customCategory.topAnchor.constraint(equalTo: topProductLabel.bottomAnchor, constant: 5),
             customCategory.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             customCategory.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             customCategory.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -10),
@@ -242,7 +242,10 @@ struct HomeViewPreview: PreviewProvider {
     
     static var previews: some View {
         
-        ContainerView()
+        Group {
+            ContainerView()
+            ContainerView()
+        }
         
     }
     
