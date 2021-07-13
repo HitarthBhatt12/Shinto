@@ -10,7 +10,8 @@ import UIKit
 class CarauselCollectionView: UIView {
     
     var images: [String] = ["slideOne", "slideTwo", "slideThree"]
-    
+    var selectedIndex: Int = 0
+    var timer: Timer?
     
     
     lazy var collectionView: UICollectionView = {
@@ -26,7 +27,7 @@ class CarauselCollectionView: UIView {
         collection.backgroundColor = .white
         collection.showsHorizontalScrollIndicator = false
         collection.register(CarauselCollectionCell.self, forCellWithReuseIdentifier: CarauselCollectionCell.reuseID)
-        collection.contentInset = UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
+        collection.contentInset = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 10)
         
         return collection
     }()
@@ -38,10 +39,9 @@ class CarauselCollectionView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = .black
-        
         setupView()
         setupConstraints()
+        startAutoScrolling()
         
     }
     
@@ -58,15 +58,7 @@ class CarauselCollectionView: UIView {
     
     func setupConstraints() {
         
-        NSLayoutConstraint.activate([
-        
-            collectionView.topAnchor.constraint(equalTo: topAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-        
-        ])
+        collectionView.pin(to: self)
         
     }
     
@@ -77,6 +69,23 @@ class CarauselCollectionView: UIView {
     
     
     
+    
+    func startAutoScrolling() {
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { _ in
+            
+            self.presentImage(index: self.selectedIndex + 1)
+        })
+        
+    }
+    
+    
+    func presentImage(index: Int) {
+        let index = images.count > index ? index : 0
+        guard selectedIndex != index else { return }
+        selectedIndex = index
+        collectionView.scrollToItem(at: IndexPath(item: selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
+    }
     
     
     

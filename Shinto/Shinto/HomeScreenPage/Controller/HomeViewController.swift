@@ -26,7 +26,7 @@ class HomeViewController: BaseViewController {
         collection.showsHorizontalScrollIndicator = false
         collection.showsVerticalScrollIndicator = false
         collection.register(TopProductCell.self, forCellWithReuseIdentifier: TopProductCell.reuseID)
-        collection.contentInset = UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
+        collection.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         
         return collection
     }()
@@ -38,7 +38,20 @@ class HomeViewController: BaseViewController {
         
         l.translatesAutoresizingMaskIntoConstraints = false
         l.text = "Hey Hitarth"
-        l.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
+        l.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+        l.textColor = .black
+        
+        return l
+    }()
+    
+    
+    
+    let topProductLabel: UILabel = {
+        let l = UILabel()
+        
+        l.translatesAutoresizingMaskIntoConstraints = false
+        l.text = "Top Product"
+        l.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         l.textColor = .black
         
         return l
@@ -83,33 +96,38 @@ class HomeViewController: BaseViewController {
         view.addSubview(collectionView)
         view.addSubview(customCategory)
         view.addSubview(carauselView)
+        view.addSubview(topProductLabel)
         
     }
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            heyLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
+            heyLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
             heyLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            heyLabel.bottomAnchor.constraint(equalTo: carauselView.topAnchor, constant: -20),
+            heyLabel.bottomAnchor.constraint(equalTo: carauselView.topAnchor, constant: -5),
             
             
-            carauselView.topAnchor.constraint(equalTo: heyLabel.bottomAnchor, constant: 20),
+            carauselView.topAnchor.constraint(equalTo: heyLabel.bottomAnchor, constant: 5),
             carauselView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             carauselView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            customCategory.bottomAnchor.constraint(equalTo: customCategory.topAnchor, constant: -20),
+            carauselView.bottomAnchor.constraint(equalTo: topProductLabel.topAnchor, constant: -20),
             carauselView.heightAnchor.constraint(equalToConstant: 240),
             
             
-            customCategory.topAnchor.constraint(equalTo: carauselView.bottomAnchor, constant: 20),
+            topProductLabel.topAnchor.constraint(equalTo: carauselView.bottomAnchor, constant: 10),
+            topProductLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            topProductLabel.bottomAnchor.constraint(equalTo: customCategory.topAnchor, constant: -5),
+            
+            customCategory.topAnchor.constraint(equalTo: topProductLabel.bottomAnchor, constant: 20),
             customCategory.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             customCategory.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             customCategory.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -10),
             customCategory.heightAnchor.constraint(equalToConstant: 40),
             
             collectionView.topAnchor.constraint(equalTo: customCategory.bottomAnchor, constant: 10),
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
 //            collectionView.heightAnchor.constraint(equalToConstant: 250),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
@@ -192,7 +210,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: Sizes.screenWidth/2 - 15 , height: 220)
+        return CGSize(width: Sizes.screenWidth/2 - 30 , height: 220)
     }
     
     
