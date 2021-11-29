@@ -28,9 +28,9 @@ Setup Instructions
 ------------------
 To integrate SSMediaLibrary into your Xcode project using CocoaPods, specify it in your `Podfile`:
 ```ruby
-pod 'SSMediaLibrary', '~> 1.0.0'
+pod 'SwiftyGo', '~> 1.0.0'
 ```
-and in your code add `import SSMediaLibrary`.
+and in your code add `import SwiftyGo`.
 
 [Swift Package Manager](https://swift.org/package-manager/)
 ------------------
