@@ -15,7 +15,7 @@ Usage Demo
 ----------
 
 <p align="center">
-<img src="Images/Jain Fast Food/Home.png" width="230"  title="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Images/Jain Fast Food/Menu.png" width="230" title="Menu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="MoveToView.gif" width="230"  title="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Images/Jain Fast Food/Menu.png" width="230" title="Menu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 Setup Instructions
