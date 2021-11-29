@@ -2,9 +2,9 @@
 
 SSSwiftyGo
 =============
-[![CocoaPods Version](https://img.shields.io/cocoapods/v/SSMediaLibrary.svg)](http://cocoadocs.org/docsets/SSMediaLibrary)
-[![Platform](https://img.shields.io/cocoapods/p/SSMediaLibrary.svg?style=flat)](http://cocoapods.org/pods/SSMediaLibrary)
-[![License](https://img.shields.io/cocoapods/l/SSMediaLibrary.svg?style=flat)](https://cocoapods.org/pods/SSMediaLibrary)
+[![CocoaPods Version](https://img.shields.io/cocoapods/v/SSMediaLibrary.svg)](https://cocoapods.org/pods/SwiftyGo)
+[![Platform](https://img.shields.io/cocoapods/p/SSMediaLibrary.svg?style=flat)](https://cocoapods.org/pods/SwiftyGo)
+[![License](https://img.shields.io/cocoapods/l/SSMediaLibrary.svg?style=flat)](https://cocoapods.org/pods/SwiftyGo)
 [![Swift Version][swift-image]][swift-url]
 [![PRs Welcome][PR-image]][PR-url]
 [![Twitter](https://img.shields.io/badge/Twitter-@simform-blue.svg?style=flat)](https://twitter.com/simform)
@@ -54,11 +54,11 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 ```
 Navigate To Next
 ----------------
+<img src="MoveToView.gif" width="800"  title="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-<p align="center">
-<img src="MoveToView.gif" width="1000"  title="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="popToPrevious.gifg" width="1000" title="Menu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
-
+Pop To Previous
+---------------
+<img src="popToPrevious.gif" width="800" title="Menu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 # Check out our other Libraries
 
