@@ -9,16 +9,7 @@ SSSwiftyGo
 [![PRs Welcome][PR-image]][PR-url]
 [![Twitter](https://img.shields.io/badge/Twitter-@simform-blue.svg?style=flat)](https://twitter.com/simform)
 
-SSMediaLibrary is written in Swift with the use of Combine framework. It will download and open up following files:
-* iWork documents
-* Microsoft Office documents (Office ‘97 and newer)
-* Rich Text Format (RTF) documents
-* PDF files
-* Images
-* Text files whose uniform type identifier (UTI) conforms to the public.text type
-* Comma-separated value (csv) files
-* Video
-* Any URL
+SSSwiftyGo is written in Swift to help you to navigate in SwiftUI Views using only one line of code.
 
 <center><img src="/SSMediaLibraryExample.gif" height="500"/></center>
 
@@ -49,20 +40,21 @@ When using Xcode 11 or later, you can install `SSMediaLibrary` by going to your 
 1. Just provide URL to the MediaManager
 2. Call the show function of MediaManager
 
-Basic Examples
+Initial Setup
 ---------
 ```swift
-guard let url = URL(string: "http://www.africau.edu/images/default/sample.pdf") else { return }
-let manager = MediaManager(url: url)
-manager.show()
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        
+        Coordinator.initialise(view: HomeView())
 
-guard let url = URL(string: "https://file-examples-com.github.io/uploads/2017/10/file_example_JPG_100kB.jpg") else { return }
-let manager = MediaManager(url: url)
-manager.show()
-
-guard let url = URL(string: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mov-file.mov") else { return }
-let manager = MediaManager(url: url)
-manager.show()
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = Coordinator.rootView
+        self.window = window
+        window.makeKeyAndVisible()
+        
+        return true
+    }
 ```
 # To-Do
 * Show file downloading progress
