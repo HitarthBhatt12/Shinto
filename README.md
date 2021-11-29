@@ -39,17 +39,17 @@ When using Xcode 11 or later, you can install `SSSwiftyGo` by going to your Proj
 Initial Setup
 ---------
 ```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        Coordinator.initialise(view: HomeView())
+func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = Coordinator.rootView
-        self.window = window
-        window.makeKeyAndVisible()
+        let contentView = ContentView()
+        Coordinator.initialize(view: contentView)
         
-        return true
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = Coordinator.rootView
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 ```
 # Check out our other Libraries
