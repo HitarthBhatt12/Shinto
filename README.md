@@ -11,6 +11,13 @@ SSSwiftyGo
 
 SSSwiftyGo is written in Swift to help you to navigate in SwiftUI Views using only one line of code.
 
+Usage Demo
+----------
+
+<p align="center">
+<img src="Images/Jain Fast Food/Home.png" width="230"  title="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Images/Jain Fast Food/Menu.png" width="230" title="Menu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
 Setup Instructions
 ------------------
 [CocoaPods](http://cocoapods.org)
