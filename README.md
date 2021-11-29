@@ -35,8 +35,6 @@ When using Xcode 11 or later, you can install `SSSwiftyGo` by going to your Proj
 * Xcode 11+
 
 # Usage
-1. Just provide URL to the MediaManager
-2. Call the show function of MediaManager
 
 Initial Setup
 ---------
