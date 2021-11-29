@@ -25,11 +25,11 @@ and in your code add `import SwiftyGo`.
 
 [Swift Package Manager](https://swift.org/package-manager/)
 ------------------
-When using Xcode 11 or later, you can install `SSMediaLibrary` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
+When using Xcode 11 or later, you can install `SSSwiftyGo` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Swift Packages` > `Add Package Dependencies...`
 
 ## Manually
 
-1. Add `MediaManager.swift`, `NetworkManager.swift` and `UTI.swift` to your project.
+1. Add `MainCoordinator.swift` and `NavigationProtocol.swift` to your project.
 2. Grab yourself a cold 🍺.
 
 ## Requirements
@@ -56,11 +56,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         return true
     }
 ```
-# To-Do
-* Show file downloading progress
-* Support for other file
+# Check out our other Libraries
 
-<h3><a href="https://github.com/SimformSolutionsPvtLtd"><u>🗂 Check out our other libraries→</u></a></h3>
+<h3><a href="https://github.com/SimformSolutionsPvtLtd"><u>🗂 Simform Solutions Libraries→</u></a></h3>
 
 
 ## MIT License
