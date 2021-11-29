@@ -11,13 +11,6 @@ SSSwiftyGo
 
 SSSwiftyGo is written in Swift to help you to navigate in SwiftUI Views using only one line of code.
 
-Usage Demo
-----------
-
-<p align="center">
-<img src="MoveToView.gif" width="230"  title="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Images/Jain Fast Food/Menu.png" width="230" title="Menu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
-
 Setup Instructions
 ------------------
 [CocoaPods](http://cocoapods.org)
@@ -59,6 +52,14 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
         }
     }
 ```
+Navigate To Next
+----------------
+
+<p align="center">
+<img src="MoveToView.gif" width="1000"  title="Home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="popToPrevious.gifg" width="1000" title="Menu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+
 # Check out our other Libraries
 
 <h3><a href="https://github.com/SimformSolutionsPvtLtd"><u>🗂 Simform Solutions Libraries→</u></a></h3>
